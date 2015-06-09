@@ -1,0 +1,70 @@
+extends layout
+block content
+  script( src='/javascripts/admin.js')
+  button(class='pull-right btn btn-primary', style="margin-right: 30px", type='button', data-toggle='modal', data-target='#myModal') Create New Question
+  div(id="myModal", class="modal fade", role="dialog")
+    div(class="modal-dialog")
+      div(class="modal-content")
+        div(class="modal-header")
+          button(type="button", class="close", data-dismiss="modal") &times;
+          h4(id="modal-title", class="modal-title") Add Question
+        div(class="modal-body")
+            label(for='question') Question:  
+              input(id='question', class='answer', type='text', name='question', size='40')
+            br
+            br
+            label(class='answer', for='answer1') Answer 1:   
+              input(id='answer1', class='answer', type='text')
+            br
+            label(class='answer', for='answer2') Answer 2:   
+              input(id='answer2', class='answer', type='text')
+            br
+            label(class='answer', for='answer3') Answer 3:   
+              input(id='answer3', class='answer', type='text')
+            br
+            label(class='answer', for='answer4') Answer 4:   
+              input(id='answer4', class='answer', type='text')
+        div(class="modal-footer")
+          div(class='btn-group')
+            button(id='new_question_button', type="button", class="btn btn-primary", onclick="addQuestion()", disabled='disabled') Submit
+            button(type="button", class="btn btn-primary", data-dismiss="modal") Close
+  br
+  br
+  div(class="row" style="margin-left: 30px; margin-right: 30px")
+    h2 User Growth
+    div(class='col-md-6')
+      div(id="userPieChart", style="margin: 0 auto; height: 300px; width: 300px")  
+    div(class='col-md-6')
+      br
+      br
+      h2(id='totalUsers')
+      br
+      table(class="table table-condensed", style="margin: 0 auto")
+        tr  
+          td User Growth in the Last Day:
+          td(id='num_users_last_day')
+        tr  
+          td User Growth in the Last Hour:
+          td(id='num_users_last_hour')
+        tr  
+          td User Growth in the Last Minute:
+          td(id='num_users_last_minute')
+  div(class="row", style="margin-left: 30px; margin-right: 30px")
+    h2 Activity Growth
+    div(class='col-md-6')
+      div(id="responsePieChart", style="margin: 0 auto; height: 300px; width: 300px")  
+    div(class='col-md-6')  
+      br
+      br
+      h2(id='totalResponses')
+      br
+      table(class="table table-condensed" style="margin: 0 auto")
+        tr  
+          td Questions Answered in the Last Day:
+          td(id='num_responses_last_day')
+        tr  
+          td Questions Answered in the last Hour:
+          td(id='num_responses_last_hour')
+        tr  
+          td Questions Answered in the last Minute:
+          td(id='num_responses_last_minute')

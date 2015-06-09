@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  script( src='/javascripts/index.js')
+  div(class="col-md-12 text-center")
+    h3 Returning User
+    br
+    label(for='username') Username:  
+      input(id='login_username' type='text', name='username')
+    br
+    label(for='password') &nbsp;Password:   
+      input(id='login_password' type='password', name='password')
+    br
+    button(id='login_button' class='btn btn-primary', type='button') Login!
+    br
+    br
+    p(id='login_error', style='display: none') Login credentials were invalid
+    br
+    h3 New User
+    br
+    label(for='username') Username:  
+        input(id='signup_username' type='text', name='username')
+    br
+    label(for='password') &nbsp;Password:   
+      input(id='signup_password' type='password', name='password')
+    br
+    button(id='signup_button' class='btn btn-primary', type='button') Sign Up!
+    br
+    p(id='signup_error', style='display: none') A user already exists with that Username

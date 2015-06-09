@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "schneid",
+    "password": "gohabsgo",
+    "database": "querybuilder",
+    "host": "surveybuilder.cetcunwh3in7.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

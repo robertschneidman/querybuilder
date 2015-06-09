@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    script( src='/javascripts/jquery.min.js')
+    script( src='/javascripts/jquery.flot.js')
+    script( src='/javascripts/jquery.flot.pie.js')
+    script( src='/javascripts/bootstrap.min.js')
+    nav(class='navbar navbar-inverse navbar-static-top')
+      a(class='navbar-brand') Survey Builder
+      ul(id='sign-out', class='nav navbar-nav navbar-right' style='display: none')
+        li
+          a(href='http://localhost:3000', style='margin-right: 10px') Sign Out
+
+  body
+    block content
